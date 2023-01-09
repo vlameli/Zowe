@@ -4,7 +4,7 @@ on: [pull_request]
 
 jobs:
   create_issue:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     permissions:
       issues: write 
     steps:
