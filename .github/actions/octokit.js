@@ -9,6 +9,5 @@ async function createPrComment() {
   // No need to pass process.env.GITHUB_TOKEN, `@octokit/action`
   // is using it directly and throws an error if it is not present.
   const octokit = new Octokit();
-
   console.log("Comment created: %d", data.html_url);
 }
