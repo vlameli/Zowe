@@ -10,15 +10,5 @@ async function createPrComment() {
   // is using it directly and throws an error if it is not present.
   const octokit = new Octokit();
 
-  // See https://developer.github.com/v3/issues/comments/#create-a-comment
-  const { data } = await octokit.request(
-    "POST /repos/:repository/issues/:pr_number/comments",
-    {
-      repository: process.env.GITHUB_REPOSITORY,
-      pr_number: eventPayload.pull_request.number,
-      body: "Thank you for your pull request!"
-    }
-  );
-
   console.log("Comment created: %d", data.html_url);
 }
